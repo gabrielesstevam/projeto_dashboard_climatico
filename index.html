@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard Climático</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <main class="container-main">
+        <video class="wallpaper-video" src="assets/videos/light-mode.webm" fetchpriority="high" loop autoplay muted playsinline></video>
+        <div class="container-header glass shadow">
+            <span class="logo-side">
+                <img src="assets/images/logo.png" alt="logo" class="logo">
+                <p>DashBoard Climático</p>
+            </span>
+            <span class="button-side">
+                <button aria-label="Reiniciar o dados salvos" id="button-reset">Reiniciar</button>
+                <button aria-label="Visualizar cidades fixadas" id="button-fixed-modal">Fixados</button>
+                <button aria-label="Mudar o tema da página" id="button-theme">Modo Escuro</button>
+            </span>
+        </div>
+        <div class="container-social">
+            <a class="button-github glass shadow" href="https://github.com/gabrielesstevam" target="_blank">
+                <i class="fa-brands fa-github"></i>
+                <p>gabrielesstevam</p>
+            </a>
+            <a class="button-linkedin glass shadow" href="https://www.linkedin.com/in/gabrielesstevam/" target="_blank">
+                <i class="fa-brands fa-square-linkedin"></i>
+                <p>gabrielesstevam</p>
+            </a>
+        </div>
+        <form class="container-search">
+            <span class="glass shadow">
+                <label for="isearch-bar"><i class="fa-solid fa-magnifying-glass"></i></label>
+                <input aria-label="Digitar a cidade que deseja pesquisar" type="text" name="search-bar" id="isearch-bar" placeholder="Digite o nome de uma cidade" autocomplete="off">
+            </span>
+            <input aria-label="Pesquisar" type="submit" value="Buscar" class="button-search glass shadow">
+        </form>
+        <div class="container-itens-fixed">
+        </div>
+    </main>
+    <section class="container-response">
+        <h2 class="title-search">Armazenamento de Busca</h2>
+        <hr>
+        <div class="container-itens-response">
+        </div>
+    </section>
+    <aside class="container-modal-fix glass shadow closed">
+    </aside>
+    <aside class="container-modal-description glass shadow closed">
+        <div class="front-image"></div>
+        <p class="description description-name">New York, Estados Unidos da America</p>
+        <p class="description description-climatic">Chovendo</p>
+        <div class="container-description">
+            <span>
+                <i class="fa-solid fa-temperature-quarter"></i>
+                <p class="description-temperature">32 °C</p>
+                <p class="abbr glass shadow">Temperatura Atual</p>
+            </span>
+            <span>
+                <i class="fa-solid fa-temperature-arrow-up"></i>
+                <p class="description-max-temperature">36 °C</p>
+                <p class="abbr glass shadow">Temperatura Máxima</p>
+            </span>
+            <span>
+                <i class="fa-solid fa-temperature-arrow-down"></i>
+                <p class="description-min-temperature">29 °C</p>
+                <p class="abbr glass shadow">Temperatura Mínima</p>
+            </span>
+            <span>
+                <i class="fa-solid fa-wind"></i>
+                <p class="description-wind">42 km/h</p>
+                <p class="abbr glass shadow">Velocidade do Vento</p>
+            </span>
+            <span>
+                <i class="fa-solid fa-cloud"></i>
+                <p class="description-cloud">62%</p>
+                <p class="abbr glass shadow">Nuvens no Céu</p>
+            </span>
+            <span>
+                <i class="fa-solid fa-droplet"></i>
+                <p class="description-humidity">32%</p>
+                <p class="abbr glass shadow">Umidade</p>
+            </span>
+            <span>
+                <i class="fa-brands fa-mattermost"></i>
+                <p class="description-pressure">124 hPa</p>
+                <p class="abbr glass shadow">Pressão atmosférica</p>
+            </span>
+            <span>
+                <i class="fa-solid fa-clock"></i>
+                <p class="description-time">14:00</p>
+                <p class="abbr glass shadow">Hora local do último registro</p>
+            </span>
+    </aside>
+    <aside class="loading-wallpaper">
+        <div class="loading"></div>
+    </aside>
+    <p class="information alert glass shadow closed">Dados de Parnamirim Salvos com Sucesso</p>
+    <p class="information warn glass shadow closed">Erro na Requisição!</p>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
